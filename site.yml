@@ -5,12 +5,12 @@
   roles:
     - ansible-role-version-gather-linux
 
-- hosts: localhost
-  become: yes
-  become_user: clacko
-  post_tasks:
-    - name: running ansible facts
-      shell: ansible linux -m setup | grep local_fact
-      register: result
-    - debug: msg="{{ result.stdout.split('\n') }}"     
 
+#- hosts: localhost
+#  become: yes
+#  become_user: clacko
+#  post_tasks:
+#    - name: running ansible facts
+#      shell: ansible linux -m setup
+#      register: result
+#    - debug: msg="{{ ansible_local }}" 
